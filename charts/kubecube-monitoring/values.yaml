@@ -115,16 +115,6 @@ global:
 ## Configuration for kubecube components
 ##
 kubecube:
-  hnc:
-    ## Set propagation for alertmanagerconfig and secrets
-    ##
-    enabled: true
-    ## tool image for setting hnc propagation config.
-    ##
-    image:
-      repository: hub.c.163.com/kubecube/kubectl-tools
-      tag: 1.21.0
-      sha: ""
   thanos:
     query:
       enabled: true
