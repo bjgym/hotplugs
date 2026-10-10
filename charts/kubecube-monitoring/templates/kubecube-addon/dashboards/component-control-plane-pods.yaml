@@ -20,7 +20,7 @@ spec:
       name: namespace
       label: 空间
       # TODO: Using kube_namespace_labels metrics with labels to filter.
-      request: "label_values(kube_namespace_created{cluster=\"$cluster\",namespace=~\"kube-system|kubecube-monitoring|kubecube-system|hnc-system|local-path-storage|ingress-nginx\"}, namespace)"
+      request: "label_values(kube_namespace_created{cluster=\"$cluster\",namespace=~\"kube-system|kubecube-monitoring|kubecube-system|local-path-storage|ingress-nginx\"}, namespace)"
       datasource: prometheus
   - query:
       name: pod
