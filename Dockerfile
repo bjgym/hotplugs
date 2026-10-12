@@ -12,7 +12,10 @@
 #See the License for the specific language governing permissions and
 #limitations under the License.
 
-FROM hub.c.163.com/library/alpine:3.6
+# alpine:3.6 has no arm64 variant and the old mirror is deprecated; use the
+# multi-arch official image so the warden-init image builds for both amd64
+# and arm64. The bundle only carries shell scripts and a tarball.
+FROM alpine:3.18
 
 COPY third-charts.tar.gz .
 
